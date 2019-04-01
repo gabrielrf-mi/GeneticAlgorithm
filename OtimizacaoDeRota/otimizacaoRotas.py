@@ -3,8 +3,8 @@ from plot import *
 
 TAXA_MUTACAO = 0.01
 TAXA_CRUZAMENTO = 0.9
-TAMANHO_POPULACAO = 50
-NUMERO_GERACOES = 300
+TAMANHO_POPULACAO = 1000
+NUMERO_GERACOES = 10000
 
 
 class no:
@@ -112,11 +112,53 @@ grafo.ligarNos(763, 307, 790, 336)
 grafo.ligarNos(790, 336, 1012, 360)
 grafo.ligarNos(1012, 360, 1131, 360)
 grafo.ligarNos(1131, 360, 1175, 391)
-
+grafo.ligarNos(332, 418, 334, 520)
+grafo.ligarNos(253, 418, 258, 511)
+grafo.ligarNos(334, 520, 258, 511)
+grafo.ligarNos(258, 511, 144, 500)
+grafo.ligarNos(258, 511, 267, 645)
+grafo.ligarNos(144, 500, 176, 418)
+grafo.ligarNos(267, 645, 136, 628)
+grafo.ligarNos(136, 628, 32, 616)
+grafo.ligarNos(136, 628, 144, 500)
+grafo.ligarNos(258, 511, 47, 491)
+grafo.ligarNos(32, 616, 47, 491)
+grafo.ligarNos(47, 491, 50, 418)
+grafo.ligarNos(78, 421, 50, 418)
+grafo.ligarNos(50, 418, 58, 261) 
+grafo.ligarNos(58, 261, 53, 107) 
+grafo.ligarNos(53, 107, 139, 106) 
+grafo.ligarNos(58, 261, 78, 262) 
+grafo.ligarNos(267, 645, 427, 662)
+grafo.ligarNos(427, 662, 441, 530)
+grafo.ligarNos(441, 530, 334, 520)
+grafo.ligarNos(441, 530, 488, 533)
+grafo.ligarNos(488, 533, 627, 549)
+grafo.ligarNos(488, 533, 488, 449)
+grafo.ligarNos(427, 662, 614, 678)
+grafo.ligarNos(614, 678, 627, 549)
+grafo.ligarNos(371, 106, 583, 106)
+grafo.ligarNos(583, 106, 576, 268)
+grafo.ligarNos(627, 549, 743, 560)
+grafo.ligarNos(614, 678, 732, 682)
+grafo.ligarNos(732, 682, 743, 560)
+grafo.ligarNos(743, 560, 751, 449)
+grafo.ligarNos(751, 449, 783, 421)
+grafo.ligarNos(758, 368, 783, 421)
+grafo.ligarNos(783, 421, 908, 437)
+grafo.ligarNos(908, 437, 1012, 360)
+grafo.ligarNos(732, 682, 871, 696)
+grafo.ligarNos(871, 696, 1009, 619)
+grafo.ligarNos(1009, 619, 1012, 360)
+grafo.ligarNos(1009, 619, 1237, 461)
+grafo.ligarNos(871, 696, 1236, 735)
+grafo.ligarNos(1237, 461, 1236, 735)
+grafo.ligarNos(1237, 461, 1237, 390)
+grafo.ligarNos(1237, 390, 1175, 391)
 
 
 # Coloca o no de inicio e fim nas funcoes grafo.index(x,y)
-INICIO = grafo.grafo[grafo.posicao(78, 421)]
+INICIO = grafo.grafo[grafo.posicao(78, 262)]
 FINAL = grafo.grafo[grafo.posicao(1175, 391)]
 
 
