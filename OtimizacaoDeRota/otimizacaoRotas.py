@@ -4,7 +4,7 @@ from plot import *
 TAXA_MUTACAO = 0.01
 TAXA_CRUZAMENTO = 0.9
 TAMANHO_POPULACAO = 1000
-NUMERO_GERACOES = 10000
+NUMERO_GERACOES = 5000
 
 
 class no:
@@ -158,8 +158,12 @@ grafo.ligarNos(1237, 390, 1175, 391)
 
 
 # Coloca o no de inicio e fim nas funcoes grafo.index(x,y)
-INICIO = grafo.grafo[grafo.posicao(78, 262)]
-FINAL = grafo.grafo[grafo.posicao(1175, 391)]
+LOCAL_ATUAL = grafo.grafo[grafo.posicao(78, 262)]
+DCA = grafo.grafo[grafo.posicao(1175, 391)]
+
+
+INICIO = LOCAL_ATUAL
+FINAL = DCA
 
 
 class cromossomo:
