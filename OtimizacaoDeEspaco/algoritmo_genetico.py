@@ -1,5 +1,5 @@
 from random import random
-import matplotlib.pyplot as pt
+import matplotlib.pyplot as plt
 
 class Produto():
 
@@ -122,8 +122,8 @@ class AlgoritmoGenetico():
             individuo.avaliacao()
         
         self.ordena_populacao()
-
-        
+        self.melhor_solucao = self.populacao[0]
+        self.lista_solucoes.append(self.melhor_solucao.nota_avaliacao)
 
         self.visualiza_geracao()
 
@@ -150,6 +150,7 @@ class AlgoritmoGenetico():
             self.visualiza_geracao()
 
             melhor = self.populacao[0]
+            self.lista_solucoes.append(melhor.nota_avaliacao)
             self.melhor_individuo(melhor)
 
         print("\nMelhor solução -> G: %s Valor: %s Espaco: %s Cromossomo: %s" %
@@ -188,9 +189,9 @@ if __name__ == '__main__':
         nomes.append(produto.nome)
 
     limite = 3
-    tamanho_populacao = 100
+    tamanho_populacao = 500
     taxa_mutacao = 0.01
-    numero_geracoes = 200
+    numero_geracoes = 1000
 
     ag = AlgoritmoGenetico(tamanho_populacao)
     resultado = ag.resolver(taxa_mutacao, numero_geracoes, espacos, valores, limite)
@@ -199,4 +200,10 @@ if __name__ == '__main__':
             print("Nome: %s R$ %s " % (lista_produtos[i].nome,
                                        lista_produtos[i].valor))
 
+    # for valor in ag.lista_solucoes:
+    #     print(valor)
+
+    plt.plot(ag.lista_solucoes)
+    plt.title("Acompanhamento dos valores")
+    plt.show()
     
